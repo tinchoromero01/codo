@@ -15,12 +15,15 @@ body.modo-oscuro {
 
 
 body.modo-oscuro .titulo,
-body.modo-oscuro #anotate {
+body.modo-oscuro #anotate
+body.modo-oscuro #texto-email {
     background-color: #1c2024;
 
     color: #fff; 
 }
-
+body.modo-oscuro #texto-email {
+color: rgb(255, 255, 255);
+}
 
 ::-webkit-scrollbar {
   width: 10px; /
@@ -146,6 +149,8 @@ body.modo-oscuro #anotate {
 }
 
 
+
+
 /* -------------------------- FORMULARIO -------------------------- */
 
 
@@ -165,34 +170,36 @@ body.modo-oscuro #anotate {
   
 }
 
-
-
-
 #envio{
-  background-color: #7ccf2f;
+  background: #7ccf2f;
   color: whitesmoke;
   
 }
 
 
+#envio:hover{
+  opacity: 0.8;
+}
+
+#texto-email{
+  font-size: 14px;
+  font-weight: 100;
+}
+
+
 /* -------------------------- FOOTER -------------------------- */
 
-/* #main-footer {
-  background: #1d3c4e !important;
+ #footer {
+background: linear-gradient(90deg, rgba(28, 56, 70, 1) 0%, rgba(31, 82, 113, 1) 100%);
+
   color: #fff;
   padding: 1.2rem;
   margin-top: 1.5rem;
 }
 
-#main-footer .nav-link {
+#footer .nav-link {
   color: #fff;
   text-align: center;
 }
-#main-footer .nav-link:hover { opacity: .7; }
 
-@media (min-width: 992px) {
-  #main-footer .nav-link span { display: block; }
-} */
-
-
-/*<ul class="nav justify-content-center justify-content-lg-between align-items-center"> */
+#footer .nav-link:hover { opacity: 0.6; }

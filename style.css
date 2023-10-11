@@ -15,15 +15,13 @@ body.modo-oscuro {
 
 
 body.modo-oscuro .titulo,
-body.modo-oscuro #anotate
+body.modo-oscuro #anotate,
 body.modo-oscuro #texto-email {
     background-color: #1c2024;
 
     color: #fff; 
 }
-body.modo-oscuro #texto-email {
-color: rgb(255, 255, 255);
-}
+
 
 ::-webkit-scrollbar {
   width: 10px; /

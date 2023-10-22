@@ -1,0 +1,61 @@
+/* -------------------------- BODY -------------------------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Inclusive+Sans&family=Montserrat:wght@200&display=swap');
+
+
+button{
+    background-color: transparent;
+    /* width: 15%; */
+    border: none;
+  }
+
+
+
+/* -------------------------- NAVBAR -------------------------- */
+
+.navbar-brand img { max-width: 100px; }
+
+.bg-dark { background: #333a40!important; }
+
+.navbar-dark .navbar-nav .compra-tickets { color: #25a342; }
+
+
+@media (min-width: 992px) {
+    .compra-tickets {
+    border: 1px solid transparent;
+    border-radius: .8rem;
+  }
+  .compra-tickets:hover,
+  .navbar-dark .navbar-nav .compra-tickets.active {
+    background: #25a342;
+  }
+}
+
+
+.navbar{
+    padding: 0%;
+  }
+
+/* -------------------------- CARDS -------------------------- */
+
+
+#cartas{
+    margin-top: 8%;
+}
+
+.card{
+    border: 1px solid blue;
+    /* width: 250px;
+    height: 210px; */
+    border-radius: 0%;
+}
+
+.card-body{
+    
+}
+
+
+
+/* background: linear-gradient(90deg, rgba(28, 56, 70, 1) 0%, rgba(31, 82, 113, 1) 100%);
+ */
+/* -------------------------- FORMULARIO -------------------------- */

@@ -59,3 +59,58 @@ button{
 /* background: linear-gradient(90deg, rgba(28, 56, 70, 1) 0%, rgba(31, 82, 113, 1) 100%);
  */
 /* -------------------------- FORMULARIO -------------------------- */
+
+.titulos{
+    text-align: center;
+    font-family: "Montserrat";
+    margin: 15px;
+}
+
+#titulo{
+    font-size: 16px;
+
+}
+
+#total{
+    padding: 15px;
+    border: 1px solid rgb(199, 215, 230);
+    background-color: rgb(203, 229, 254);
+    color: rgb(66,97, 117);
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.form-control{
+    background-color: rgb(204, 204, 204);
+    color: black;
+    font-weight: 500;
+  }
+
+  #borrar{
+    background: rgb(150, 201, 62);
+    text-align: center;
+    justify-content: center;
+  }
+
+  #resumen{
+    background: rgb(150, 201, 62);
+    text-align: center;
+  }
+
+
+  /* -------------------------- FOOTER -------------------------- */
+
+ #footer {
+    background: linear-gradient(90deg, rgba(28, 56, 70, 1) 0%, rgba(31, 82, 113, 1) 100%);
+    
+      color: #fff;
+      padding: 1.2rem;
+      margin-top: 1.5rem;
+    }
+    
+    #footer .nav-link {
+      color: #fff;
+      text-align: center;
+    }
+    
+    #footer .nav-link:hover { opacity: 0.6; }

@@ -177,17 +177,19 @@
 
 
     <section class="container">
-
-        <h2 class="titulo"> VENTA <br> <b> VALOR TICKET $200 </b></h2>
-
+        <div class="titulos">
+            <h3 id="titulo"><b> VENTA</b></h3>
+            <h2 id="titulo2"><b> VALOR TICKET $200 </b></h2>
+            </h2>
+        </div>
         <form class="row" action="">
 
             <div class="col-6 mb-3">
-                <input type="text" class="form-control" placeholder="Nombre" required>
+                <input type="text" class="form-control" placeholder="Nombre" required required oninput="this.value = this.value.charAt(0).toUpperCase() + this.value.slice(1);">
             </div>
 
             <div class="col-6 mb-3">
-                <input type="text" class="form-control" placeholder="Apellido" required>
+                <input type="text" class="form-control" placeholder="Apellido" required required oninput="this.value = this.value.charAt(0).toUpperCase() + this.value.slice(1);">
             </div>
 
             <div class="col-12 mb-3">
@@ -196,13 +198,14 @@
 
             <div class="col-6 mb-3">
                 <label for="cant">Cantidad</label>
-                <input id="cant" type="text" class="form-control" placeholder="Cantidad" required>
+                <input id="cant" type="number" class="form-control" placeholder="Cantidad" required >
 
             </div>
 
             <div class="col-6 mb-3">
                 <label for="categ">Categoria</label>
-                <select id="categ" class="form-control">
+                <select id="categ" class="form-control" required>
+                    <option value="" disabled selected>Selecciona una categoría</option>
                     <option value="opcion1">Estudiante</option>
                     <option value="opcion2">Trainee</option>
                     <option value="opcion3">Junior</option>
@@ -211,17 +214,50 @@
             </div>
 
             <div class="col-12 mb-3">
-                <label for="total">Total a Pagar</label>
-                <span id="total" class="form-control" style="border: none;"></span>
+                <span id="total" class="form-control">Total a pagar: $</span>
             </div>
+                <div class="col-6">
+                    <button id="resumen" type="submit" class="btn btn-form">Resumen</button>
+                </div>
 
-            <div class="col-12">
-                <button id="envio" type="submit" class="btn btn-form">Enviar</button>
-            </div>
+                <div class="col-6">
+                    <button id="borrar" type="reset" class="btn btn-form">Borrar</button>
+                </div>
         </form>
 
     </section>
 
+
+    <section id="pie-pagina">
+
+        <footer id="footer">
+            <div class="container">
+                <ul class="nav justify-content-center justify-content-lg-between align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Preguntas <span>frecuentes</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contáctanos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Prensa</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Conferencias</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Términos y <span>condiciones</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Privacidad</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Estudiantes</a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+    </section>
 
 
 </body>

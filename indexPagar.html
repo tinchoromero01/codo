@@ -8,6 +8,7 @@
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script type="text/javascript" src="jsPagar.js"></script>
 
+
     <link rel="stylesheet" href="stylePagar.css">
 
     <style>
@@ -36,16 +37,16 @@
                 <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                     <ul class="navbar-nav mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" href="#">La conferencia</a>
+                            <a class="nav-link active" href="index.html">La conferencia</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Los oradores</a>
+                            <a class="nav-link" href="index.html">Los oradores</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">El lugar y la fecha</a>
+                            <a class="nav-link" href="index.html">El lugar y la fecha</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Conviertete en orador</a>
+                            <a class="nav-link" href="index.html">Conviertete en orador</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link compra-tickets" href="indexPagar.html">Comprar tickets</a>
@@ -68,10 +69,9 @@
 
             <div id="cartas" class="row">
 
-                <div class="col-md-4 col-sm-6 col-lg-4
-                ">
+                <div class="col-md-4 col-sm-6 col-lg-4">
                     <div class="card">
-                        <div class="card-body text-center">
+                        <div id="estudiante" class="card-body text-center">
                             <h5 class="card-title">Estudiante</h5>
                             <p class="card-text">Tienen un descuento</p>
                             <p class="card-text"><b>80%</b></p>
@@ -82,7 +82,7 @@
 
                 <div class="col-md-4 col-sm-6 col-lg-4">
                     <div class="card">
-                        <div class="card-body text-center">
+                        <div id="trainee" class="card-body text-center">
                             <h5 class="card-title">Trainee</h5>
                             <p class="card-text">Tienen un descuento</p>
                             <p class="card-text"><b>50%</b></p>
@@ -96,7 +96,7 @@
 
                 <div class="col col-md-4 col-sm-12 col-lg-4">
                     <div class="card">
-                        <div class="card-body text-center">
+                        <div id="junior" class="card-body text-center">
                             <h5 class="card-title">Junior</h5>
                             <p class="card-text">Tienen un descuento</p>
                             <p class="card-text"><b>15%</b></p>
@@ -172,11 +172,60 @@
         </div>
       </div> -->
 
+      <section class="container">
+        <div class="titulos">
+            <h3 id="titulo"><b> VENTA</b></h3>
+            <h2 id="titulo2"><b> VALOR TICKET $200 </b></h2>
+            </h2>
+        </div>
+        <form class="row" action="">
+            <div class="col-6 mb-3">
+                <input type="text" class="form-control" placeholder="Nombre" required
+                    oninput="this.value = this.value.charAt(0).toUpperCase() + this.value.slice(1);">
+            </div>
+    
+            <div class="col-6 mb-3">
+                <input type="text" class="form-control" placeholder="Apellido" required
+                    oninput="this.value = this.value.charAt(0).toUpperCase() + this.value.slice(1);">
+            </div>
+    
+            <div class="col-12 mb-3">
+                <input type="email" class="form-control" placeholder="Correo" required>
+            </div>
+    
+            <div class="col-6 mb-3">
+                <label for="cant">Cantidad</label>
+                <input id="cant" type="number" class="form-control" placeholder="Cantidad" required>
+            </div>
+    
+            <div class="col-6 mb-3">
+                <label for="categ">Categoria</label>
+                <select id="categ" class="form-control" required>
+                    <option value="" disabled selected>Selecciona una categoría</option>
+                    <option value="opcion1">Estudiante</option>
+                    <option value="opcion2">Trainee</option>
+                    <option value="opcion3">Junior</option>
+                </select>
+            </div>
+    
+    
+            <div class="col-12 mb-3">
+                <span id="total" class="form-control">Total a pagar: $0.00</span>
+            </div>
+
+            <div class="col-6">
+                <button id="resumen" type="button" class="btn btn-form">Resumen</button>
+                <span id="mensaje_error" class="error-message">Por favor, complete todos los campos antes de continuar.</span>
+            </div>
+
+            <div class="col-6">
+                <button id="borrar" type="reset" class="btn btn-form">Borrar</button>
+            </div>
+        </form>
+      </section>
 
 
-
-
-    <section class="container">
+    <!-- <section class="container">
         <div class="titulos">
             <h3 id="titulo"><b> VENTA</b></h3>
             <h2 id="titulo2"><b> VALOR TICKET $200 </b></h2>
@@ -185,11 +234,13 @@
         <form class="row" action="">
 
             <div class="col-6 mb-3">
-                <input type="text" class="form-control" placeholder="Nombre" required required oninput="this.value = this.value.charAt(0).toUpperCase() + this.value.slice(1);">
+                <input type="text" class="form-control" placeholder="Nombre" required required
+                    oninput="this.value = this.value.charAt(0).toUpperCase() + this.value.slice(1);">
             </div>
 
             <div class="col-6 mb-3">
-                <input type="text" class="form-control" placeholder="Apellido" required required oninput="this.value = this.value.charAt(0).toUpperCase() + this.value.slice(1);">
+                <input type="text" class="form-control" placeholder="Apellido" required required
+                    oninput="this.value = this.value.charAt(0).toUpperCase() + this.value.slice(1);">
             </div>
 
             <div class="col-12 mb-3">
@@ -198,13 +249,13 @@
 
             <div class="col-6 mb-3">
                 <label for="cant">Cantidad</label>
-                <input id="cant" type="number" class="form-control" placeholder="Cantidad" required >
+                <input id="cant" type="number" class="form-control" placeholder="Cantidad" required>
 
             </div>
 
             <div class="col-6 mb-3">
                 <label for="categ">Categoria</label>
-                <select id="categ" class="form-control" required>
+                <select id="categ" class="form-control">
                     <option value="" disabled selected>Selecciona una categoría</option>
                     <option value="opcion1">Estudiante</option>
                     <option value="opcion2">Trainee</option>
@@ -214,18 +265,23 @@
             </div>
 
             <div class="col-12 mb-3">
-                <span id="total" class="form-control">Total a pagar: $</span>
+                <span id="total" class="form-control">Total a pagar: $0.00</span>
             </div>
-                <div class="col-6">
-                    <button id="resumen" type="submit" class="btn btn-form">Resumen</button>
-                </div>
 
-                <div class="col-6">
-                    <button id="borrar" type="reset" class="btn btn-form">Borrar</button>
-                </div>
+            <div id="mensaje_error" class="alert alert-danger" style="display: none;">
+                Por favor, complete todos los campos antes de continuar.
+            </div>
+
+            <div class="col-6">
+                <button id="resumen" type="submit" class="btn btn-form">Resumen</button>
+            </div>
+
+            <div class="col-6">
+                <button id="borrar" type="reset" class="btn btn-form">Borrar</button>
+            </div>
         </form>
 
-    </section>
+    </section> -->
 
 
     <section id="pie-pagina">
